@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+
+
+      <%= require('html-loader!./assets/html/head.html') %>
+  </head>
+
+<body>
+<div class="orange-theme">
+
+<%= require('html-loader!./assets/html/navbar.html') %>
+
+
+<div class="page-container" id="home">
+
+
+
+
+      <section class="hero orange-theme ">
+        <div class="hero-body">
+          <div class="  has-text-centered">
+
+
+            <div class="columns">
+
+              <div class="column">
+
+              </div>
+
+              <div class="column color-white">
+
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="whitespace-sm"></div>
+
+          <div class="has-text-centered">
+
+          </div>
+
+
+        </div>
+      </section>
+
+
+
+  </div>
+</div> <!-- orange theme -->
+
+
+
+<div class="page-container" >
+
+
+
+
+
+  <div class="whitespace-sm"></div>
+
+  </div>
+
+
+
+      <%= require('html-loader!./assets/html/footer.html') %>
+
+
+      <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;"><i class="icon-arrow-up"></i></a>
+
+  </body>
+</html>
