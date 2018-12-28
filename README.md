@@ -12,9 +12,9 @@ yarn install
 
 npm run webpack #(to build the website files)
 
-# 0xBitcoin Web
+#Spellhack Web
 
-The uncompiled code for 0xbitcoin.org, 0xbitcoin.github.io
+The uncompiled code for spellhack
 
 ### Commands
 
