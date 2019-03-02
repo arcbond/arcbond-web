@@ -42,7 +42,7 @@ const jQuery = require('jquery');
 
 		// Menu.
 			$('#menu')
-				.append('<a href="#menu" class="close"></a>')
+				.append('<a href="#menu" class="fa fa-times"></a>')
 				.appendTo($body)
 				.panel({
 					delay: 500,

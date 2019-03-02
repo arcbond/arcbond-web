@@ -1,7 +1,7 @@
 {
   "name": "0xbitcointokenweb",
   "version": "0.1.2",
-  "description": "Official website for 0xbitcoin",
+  "description": "Official website for skullmage",
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
