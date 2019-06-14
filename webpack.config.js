@@ -48,7 +48,7 @@ var webpackPlugins = [
 
 const routesData = {
   routes: [
-    {url: '/', title: 'Skullmage', template: 'app/index.html', filename: 'index.html'},
+    {url: '/', title: 'Arcbond', template: 'app/index.html', filename: 'index.html'},
 
   ]
 }

@@ -5,7 +5,7 @@ const $  = require('jquery');
 
  require('./util.js');
 
- require('./broadcast.js');
+ //require('./broadcast.js');
 //import logo from '../img/0xbitcoin.png'
 
 

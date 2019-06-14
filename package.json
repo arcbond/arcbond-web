@@ -1,7 +1,7 @@
 {
-  "name": "0xbitcointokenweb",
+  "name": "arcbond-web",
   "version": "0.1.2",
-  "description": "Official website for skullmage",
+  "description": "Official website for Arcbond",
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
