@@ -7,6 +7,9 @@ var HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin
 
 var CleanWebpackPlugin = require('clean-webpack-plugin')
 
+var TailwindCSS = require('tailwindcss')
+var AutoPrefixer =  require('autoprefixer')
+var PostCssImport = require('postcss-import')
 
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -40,8 +43,11 @@ var webpackPlugins = [
       }),
 
       new CopyWebpackPlugin([
-            {from:'app/assets/img',to:'app/assets/img'  }
-        ])
+            {from:'app/assets/img',to:'img'  }
+        ]),
+    PostCssImport,
+    TailwindCSS,
+    AutoPrefixer
 ]
 
 
@@ -69,7 +75,7 @@ routesData.routes.forEach(function(element){
 
 
 module.exports = {
-    entry: ['./app/assets/javascripts/index', './app/assets/stylesheets/application.scss' ],
+    entry: ['./app/assets/javascripts/index', './app/assets/stylesheets/application.css' ],
     output: {
         path: path.resolve(__dirname, 'public'),
       //  filename: 'bundle.js',
@@ -90,11 +96,15 @@ module.exports = {
                 ]
             },
             {
-                test: /\.scss$/,
-                use: extractPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
-            },
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader',
+          ],
+        }),
+      },
             {
               test: /\.(png|jpg|gif)$/,
               use: [
@@ -120,6 +130,17 @@ module.exports = {
                 }
               ]
             },
+
+        {
+            test: /\.(png|jp(e*)g|svg)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 8000, // Convert images < 8kb to base64 strings
+                    name: 'images/[hash]-[name].[ext]'
+                }
+            }]
+        }
         ]
     },
     resolve: {
