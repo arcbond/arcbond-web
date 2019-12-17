@@ -1,6 +1,8 @@
 
 @import "fontawesome.css";
 
+@import "custom.css";
+
 @tailwind base;
 
 @tailwind components;
