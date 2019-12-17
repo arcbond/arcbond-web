@@ -2,7 +2,7 @@ var path = require("path"),
     express = require("express");
 
 var DIST_DIR = path.join(__dirname, "public"),
-    PORT = 3000,
+    PORT = 8000,
     app = express();
 
 //Serving the files on the dist folder
