@@ -8,13 +8,15 @@
 
     <%= require('html-loader!./assets/html/head.html') %>
 </head>
-	<body class="bg-white  ">
+	<body class="bg-gray-800  ">
 
 	<%= require('html-loader!./assets/html/navbar.html') %>
 
 		<div class="w-full flex flex-wrap md:h-screen pt-6">
 			<div class="pt-6 md:pt-0 w-full md:flex-1 md:order-last">
-				<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1400" class="w-full h-64 md:h-full object-cover" />
+
+        	<%= require('html-loader!./assets/html/carousel.html') %>
+
 			</div>
 			<div class="w-full p-6 pb-12 md:p-12 md:w-5/12 flex justify-center items-center relative">
 				<div class="w-full relative text-center py-12 px-12 md:p-0 md:text-right">
@@ -26,11 +28,12 @@
 		</div>
 
 
-		<div class="w-full -mt-6 pt-32 pb-24 px-12 text-center bg-black text-white">
-			<h2 class="text-4xl mb-6">Subscribe to join us</h2>
-			<p class="font-sans text-sm mx-auto max-w-xl leading-loose mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		<div class="w-full -mt-6 pt-32 pb-24 px-12 text-center bg-gray-900 text-white">
+			<h2 class="text-4xl mb-6">Get Development Updates</h2>
+		<!--
+    <p class="font-sans text-sm mx-auto max-w-xl leading-loose mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 			<p class="font-sans text-sm mx-auto max-w-xl leading-loose">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. </p>
-
+    -->
 			<form action="" method="POST">
 
 				<div class="pt-10 mb-6 flex justify-center items-end text-left">
@@ -72,7 +75,7 @@
 						<p class="mb-6 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis vulputate tellus. Etiam vel placerat lorem, eget ornare nibh. Ut in commodo magna. Quisque vitae fermentum quam. Mauris venenatis id enim at porta. Etiam molestie lorem non odio hendrerit.</p>
 						<p class="mb-6 text-gray-700">At vulputate ligula consequat. Morbi sollicitudin mollis erat, in tempus nisi. Quisque vehicula vitae sem in ornare. Vivamus id odio ligula.</p>
 						<p class="mb-10 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis vulputate tellus. Etiam vel placerat lorem, eget ornare nibh. Ut in commodo magna. Quisque vitae fermentum quam. Mauris venenatis id enim at porta. Etiam molestie lorem non odio hendrerit.</p>
-						<a href="#" class="inline-block bg-black text-white px-6 py-3 text-sm hover:bg-gray-800">Find out more</a>
+						<a href="http://forums.arcbond.com" class="inline-block bg-black text-white px-6 py-3 text-sm hover:bg-gray-800">Visit the Forums</a>
 
 					</div>
 				</div>
@@ -80,8 +83,8 @@
 
 		</div>
 
-		<div class="bg-black text-white text-center text-sm py-12">
-			<p>Copyright &copy; 2019 Mobilise</p>
+		<div class="bg-gray-900 text-white text-center text-sm py-12">
+			<p>Copyright &copy; 2019 Starflask</p>
 		</div>
 
 	</body>

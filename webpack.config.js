@@ -54,7 +54,7 @@ var webpackPlugins = [
 
 const routesData = {
   routes: [
-    {url: '/', title: 'Arcbond', template: 'app/index.html', filename: 'index.html'},
+    {url: '/', title: 'Arcbond RPG', template: 'app/index.html', filename: 'index.html'},
 
   ]
 }
