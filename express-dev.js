@@ -30,17 +30,22 @@ async function initMailingListServer()
 {
 
 
-   await mongoInterface.init();
+   //await mongoInterface.init();
 
   app.post('/subscribe', async function (req, res)  {
     
     var nameinput =  req.body.nameinput;
     var emailinput = req.body.emailinput;
     console.log(nameinput,emailinput)
-   var timestamp = new Date().valueOf() ;
+    var timestamp = new Date().valueOf() ;
 
-    var reply = await mongoInterface.insertOne("mailinglist",{nameinput, emailinput,  timestamp  })
-  
+    //var reply = await mongoInterface.insertOne("mailinglist",{nameinput, emailinput,  timestamp  })
+
+   // res.render('/subscriptioncomplete');
+    res.contentType('json');
+    res.send("Thank you for subscribing, " + nameinput +"!");
+
+    res.end();
   //  const name = req.body.name
   })
   
