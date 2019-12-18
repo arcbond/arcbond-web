@@ -1,3 +1,9 @@
+
+
+var mongoInterface = require('./lib/mongo-interface')
+
+var bodyParser = require('body-parser')
+
 var path = require("path"),
     express = require("express");
 
@@ -16,7 +22,30 @@ app.get("*", function (req, res) {
 app.listen(PORT);
 console.log('Express dev server listening on port ', PORT, "!")
 
-app.post('/subscribe', (req, res) => {
-  console.log('meep',req.body)
-  const name = req.body.name
-})
+app.use(express.urlencoded());
+app.use(express.json());      // if needed
+
+
+async function initMailingListServer()
+{
+
+
+   await mongoInterface.init();
+
+  app.post('/subscribe', async function (req, res)  {
+    
+    var nameinput =  req.body.nameinput;
+    var emailinput = req.body.emailinput;
+    console.log(nameinput,emailinput)
+    var reply = await mongoInterface.insertOne("mailinglist",{nameinput, emailinput, new Date().valueOf() })
+  
+  //  const name = req.body.name
+  })
+  
+
+}
+
+
+(async() => {
+await initMailingListServer();
+})();
