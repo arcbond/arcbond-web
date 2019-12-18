@@ -37,7 +37,9 @@ async function initMailingListServer()
     var nameinput =  req.body.nameinput;
     var emailinput = req.body.emailinput;
     console.log(nameinput,emailinput)
-    var reply = await mongoInterface.insertOne("mailinglist",{nameinput, emailinput, new Date().valueOf() })
+   var timestamp = new Date().valueOf() ;
+
+    var reply = await mongoInterface.insertOne("mailinglist",{nameinput, emailinput,  timestamp  })
   
   //  const name = req.body.name
   })
