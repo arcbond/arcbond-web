@@ -47,16 +47,22 @@
     -->
 			<form action="/subscribe" method="POST">
 
-				<div class="pt-10 mb-6 flex justify-center items-end text-left">
+				<div class="pt-10  w-1/2 justify-center items-end text-left" style="margin: 0 auto">
 
-					<div class="p-4">
-						<input type="text" name="nameinput" placeholder="First name" class="font-sans text-sm px-2 h-10 bg-transparent border-b-2" />
-					</div>
+					<div class="container mx-auto flex flex-wrap">
+						<div class="w-full md:w-1/2 md:pr-4 flex flex-wrap mb-12 md:mb-0">
 
-					<div class="p-4">
-						<input type="email" name="emailinput" placeholder="Email address" class="font-sans text-sm px-2 h-10 bg-transparent border-b-2" />
-					</div>
+							<div class="p-4 md:w-1/2 ">
+								<input type="text" name="nameinput" placeholder="First name" class="font-sans text-sm px-2 h-10 bg-transparent border-b-2" />
+							</div>
+						</div>
 
+						<div class="w-full md:w-1/2 md:pr-4 flex flex-wrap mb-12 md:mb-0">
+
+							<div class="p-4 md:w-1/2 ">
+								<input type="email" name="emailinput" placeholder="Email address" class="font-sans text-sm px-2 h-10 bg-transparent border-b-2" />
+							</div>
+						</div>
 				</div>
 
 				<button class="mx-auto bg-yellow-500 text-black font-bold px-6 py-3 flex items-center justify-center text-sm hover:bg-gray-400">Subscribe</button>
